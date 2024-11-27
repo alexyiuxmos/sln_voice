@@ -19,6 +19,7 @@
 #include "ff.h"
 #include "dr_wav_freertos_port.h"
 
+#if 0 //original code
 static const char *audio_files_en[] = {
     "50.wav",   /* sleep */
     "1.wav",  /* wakeup */
@@ -38,6 +39,27 @@ static const char *audio_files_en[] = {
     "16.wav",  /* fan_down */
     "17.wav",  /* temp_up */
     "18.wav",  /* temp_down */
+};
+#endif
+static const char *audio_files_en[] = {
+    "50.wav",   /* sleep */
+    "1.wav",  /* wakeup */
+    "2.wav",  /* tv_on */
+    "3.wav",  /* tv_off */
+    "4.wav",  /* ch_up */
+    "5.wav",  /* ch_down */
+    "6.wav",  /* vol_up */
+    "7.wav",  /* vol_down */
+    "8.wav",  /* lights_on */
+    "9.wav",  /* lights_off */
+    "10.wav",  /* lights_up*/
+    "11.wav",  /* lights_down */
+    "12.wav",  /* fan_on */
+    "13.wav",  /* fan_off */
+    "14.wav",  /* fan_up */
+    "15.wav",  /* fan_down */
+    "16.wav",  /* temp_up */
+    "17.wav",  /* temp_down */
 };
 
 #define NUM_FILES (sizeof(audio_files_en) / sizeof(char *))

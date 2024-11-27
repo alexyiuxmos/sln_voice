@@ -23,8 +23,8 @@
 #if ON_TILE(ASR_TILE_NO)
 
 #if ASR_SENSORY
-    #define IS_KEYWORD(id)    (id == 17)
-    #define IS_COMMAND(id)    (id > 0 && id != 17)
+    #define IS_KEYWORD(id)    (id == 16) //(id == 17)
+    #define IS_COMMAND(id)    (id > 0 && id != 16) //(id > 0 && id != 17)
 #elif ASR_CYBERON
     #define IS_KEYWORD(id)    (id == 1)
     #define IS_COMMAND(id)    (id >= 2)
