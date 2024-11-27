@@ -6,10 +6,15 @@ set(FFD_SRC_ROOT ${CMAKE_CURRENT_LIST_DIR})
 # NOTE: Change the value of MODEL_LANGUAGE to "mandarin_mainland" for the Mandarin demo
 #
 #****************************
+#set(MODEL_LANGUAGE "english_usa")
+#set(SENSORY_COMMAND_SEARCH_HEADER_FILE "${FFD_SRC_ROOT}/model/${MODEL_LANGUAGE}/command-pc62w-6.4.0-op10-prod-search.h")
+#set(SENSORY_COMMAND_SEARCH_SOURCE_FILE "${FFD_SRC_ROOT}/model/${MODEL_LANGUAGE}/command-pc62w-6.4.0-op10-prod-search.c")
+#set(SENSORY_COMMAND_NET_FILE "${FFD_SRC_ROOT}/model/${MODEL_LANGUAGE}/command-pc62w-6.4.0-op10-prod-net.bin.nibble_swapped")
+
 set(MODEL_LANGUAGE "english_usa")
-set(SENSORY_COMMAND_SEARCH_HEADER_FILE "${FFD_SRC_ROOT}/model/${MODEL_LANGUAGE}/command-pc62w-6.4.0-op10-prod-search.h")
-set(SENSORY_COMMAND_SEARCH_SOURCE_FILE "${FFD_SRC_ROOT}/model/${MODEL_LANGUAGE}/command-pc62w-6.4.0-op10-prod-search.c")
-set(SENSORY_COMMAND_NET_FILE "${FFD_SRC_ROOT}/model/${MODEL_LANGUAGE}/command-pc62w-6.4.0-op10-prod-net.bin.nibble_swapped")
+set(SENSORY_COMMAND_SEARCH_HEADER_FILE "${FFD_SRC_ROOT}/model/${MODEL_LANGUAGE}/command-pc62w-6.4.0-op21-dev-search.h")
+set(SENSORY_COMMAND_SEARCH_SOURCE_FILE "${FFD_SRC_ROOT}/model/${MODEL_LANGUAGE}/command-pc62w-6.4.0-op21-dev-search.c")
+set(SENSORY_COMMAND_NET_FILE "${FFD_SRC_ROOT}/model/${MODEL_LANGUAGE}/command-pc62w-6.4.0-op21-dev-net.bin.nibble_swapped")
 
 #**********************
 # Gather Sources
@@ -35,7 +40,8 @@ set(RTOS_CONF_INCLUDES
 # QSPI Flash Layout
 #**********************
 set(BOOT_PARTITION_SIZE 0x100000)
-set(FILESYSTEM_SIZE_KB 1024)
+#set(FILESYSTEM_SIZE_KB 1024)
+set(FILESYSTEM_SIZE_KB 2048)
 math(EXPR FILESYSTEM_SIZE_BYTES
      "1024 * ${FILESYSTEM_SIZE_KB}"
      OUTPUT_FORMAT HEXADECIMAL

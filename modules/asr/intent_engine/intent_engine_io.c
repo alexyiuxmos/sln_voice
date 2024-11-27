@@ -20,7 +20,7 @@
 static QueueHandle_t q_intent = 0;
 
 // look up table to converting ASR IDs to wav file IDs or strings
-#define ASR_NUMBER_OF_COMMANDS  (17)
+#define ASR_NUMBER_OF_COMMANDS  (16) //(17)
 
 typedef struct asr_lut_struct
 {
@@ -51,6 +51,24 @@ static asr_lut_t asr_lut[ASR_NUMBER_OF_COMMANDS] = {
 };
 #elif ASR_SENSORY
 static asr_lut_t asr_lut[ASR_NUMBER_OF_COMMANDS] = {
+    //model on 20241124
+    {1, 1, "increase brightness"},
+    {2, 2, "decrease brightness"},
+    {3, 3, "increase contrast"},
+    {4, 4, "decrease contrast"},
+    {5, 5, "preset reading"},
+    {6, 6, "preset gaming"},
+    {7, 7, "preset cinema"},
+    {8, 8, "preset default"},
+    {9, 9, "cycle color profile"},
+    {10, 11, "cycle input source"},
+    {11, 12, "snooze"},
+    {12, 13, "increase on time"},
+    {13, 14, "decrease on time"},
+    {14, 15, "power on"},
+    {15, 16, "power off"},
+    {16, 17, "Hey computer"}
+#if 0    
     {1, 2, "Switch on the TV"},
     {2, 4, "Channel up"},
     {3, 5, "Channel down"},
@@ -68,6 +86,7 @@ static asr_lut_t asr_lut[ASR_NUMBER_OF_COMMANDS] = {
     {15, 17, "Set lower temperature"},
     {16, 13, "Switch off the fan"},
     {17, 1, "Hello XMOS"}
+#endif
 };
 #else
 #error "Model has to be either Sensory or Cyberon"
