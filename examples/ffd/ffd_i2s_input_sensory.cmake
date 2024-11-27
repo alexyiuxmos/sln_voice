@@ -11,10 +11,13 @@ set(SENSORY_COMMAND_NET_FILE "${FFD_SRC_ROOT}/model/${MODEL_LANGUAGE}/command-pc
 #**********************
 file(GLOB_RECURSE APP_SOURCES ${CMAKE_CURRENT_LIST_DIR}/src/*.c )
 
+set(APP_SOURCES
+    ${APP_SOURCES}
+    ${SENSORY_COMMAND_SEARCH_SOURCE_FILE}
+)
 
 set(APP_INCLUDES
     ${CMAKE_CURRENT_LIST_DIR}/src
-    ${CMAKE_CURRENT_LIST_DIR}/src/control
     ${CMAKE_CURRENT_LIST_DIR}/src/gpio_ctrl
     ${CMAKE_CURRENT_LIST_DIR}/src/intent_engine
     ${CMAKE_CURRENT_LIST_DIR}/src/power
