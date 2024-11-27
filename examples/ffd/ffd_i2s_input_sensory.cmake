@@ -160,9 +160,9 @@ set(FATFS_FILE ${TARGET_NAME}_fat.fs)
 set(FLASH_CAL_FILE ${LIB_QSPI_FAST_READ_ROOT_PATH}/lib_qspi_fast_read/calibration_pattern_nibble_swap.bin)
 
 add_custom_target(${MODEL_FILE} ALL
-    COMMAND ${CMAKE_COMMAND} -E copy ${CYBERON_COMMAND_NET_FILE} ${MODEL_FILE}
+    COMMAND ${CMAKE_COMMAND} -E copy ${SENSORY_COMMAND_NET_FILE} ${MODEL_FILE}
     COMMENT
-        "Copy Cyberon NET file"
+        "Copy Sensory NET file"
     VERBATIM
 )
 
