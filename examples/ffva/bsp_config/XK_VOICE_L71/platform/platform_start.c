@@ -132,9 +132,9 @@ static void i2s_start(void)
 
 static void usb_start(void)
 {
-#if appconfUSB_ENABLED && ON_TILE(USB_TILE_NO)
+//#if appconfUSB_ENABLED && ON_TILE(USB_TILE_NO)
     usb_manager_start(appconfUSB_MGR_TASK_PRIORITY);
-#endif
+//#endif
 }
 
 static void uart_start(void)

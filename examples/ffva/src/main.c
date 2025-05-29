@@ -21,7 +21,7 @@
 #include "platform/driver_instances.h"
 #include "platform/platform_conf.h"
 #include "usb_support.h"
-#include "usb_audio.h"
+//#include "usb_audio.h"
 #include "audio_pipeline.h"
 #include "dfu_servicer.h"
 
