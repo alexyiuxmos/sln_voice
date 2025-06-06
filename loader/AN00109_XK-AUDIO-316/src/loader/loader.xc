@@ -41,7 +41,7 @@ void delay_cycles(int count) {
 }
 #endif
 /* Port for button on xk-audio-316 board. */
-in port p_button = XS1_PORT_8A; //XS1_PORT_8D;//XS1_PORT_4E;
+in port p_button = XS1_PORT_1D; //XS1_PORT_8A; //XS1_PORT_8D;//XS1_PORT_4E;
 out port p_leds = XS1_PORT_4E;
 
 /* Enum for representing button state. */
