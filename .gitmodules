@@ -10,15 +10,6 @@
 [submodule "modules/rtos"]
 	path = modules/rtos
 	url = git@github.com:xmos/fwk_rtos.git
-[submodule "modules/sample_rate_conversion/lib_src"]
-	path = modules/sample_rate_conversion/lib_src
-	url = git@github.com:xmos/lib_src.git
-[submodule "modules/voice"]
-	path = modules/voice
-	url = git@github.com:xmos/fwk_voice.git
-[submodule "modules/xscope_fileio"]
-	path = modules/xscope_fileio/xscope_fileio
-	url = git@github.com:xmos/xscope_fileio.git
 [submodule "modules/lib_qspi_fast_read"]
 	path = modules/lib_qspi_fast_read
 	url = git@github.com:xmos/lib_qspi_fast_read.git
