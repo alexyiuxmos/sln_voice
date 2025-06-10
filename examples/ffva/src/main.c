@@ -13,7 +13,7 @@
 
 /* Library headers */
 #include "rtos_printf.h"
-#include "src.h"
+//#include "src.h"
 
 /* App headers */
 #include "app_conf.h"
@@ -22,7 +22,7 @@
 #include "platform/platform_conf.h"
 #include "usb_support.h"
 //#include "usb_audio.h"
-#include "audio_pipeline.h"
+//#include "audio_pipeline.h"
 #include "dfu_servicer.h"
 
 /* Headers used for the WW intent engine */
@@ -249,12 +249,14 @@ int audio_pipeline_output(void *output_app_data,
                               frame_count);
 #endif
 
-    return AUDIO_PIPELINE_FREE_FRAME;
+    return 0; //AUDIO_PIPELINE_FREE_FRAME;
 }
 
 RTOS_I2S_APP_SEND_FILTER_CALLBACK_ATTR
 size_t i2s_send_upsample_cb(rtos_i2s_t *ctx, void *app_data, int32_t *i2s_frame, size_t i2s_frame_size, int32_t *send_buf, size_t samples_available)
 {
+    return 0;
+#if 0    
     static int i;
     static int32_t src_data[2][SRC_FF3V_FIR_TAPS_PER_PHASE] __attribute__((aligned(8)));
 
@@ -286,11 +288,14 @@ size_t i2s_send_upsample_cb(rtos_i2s_t *ctx, void *app_data, int32_t *i2s_frame,
         xassert(0);
         return 0;
     }
+#endif
 }
 
 RTOS_I2S_APP_RECEIVE_FILTER_CALLBACK_ATTR
 size_t i2s_send_downsample_cb(rtos_i2s_t *ctx, void *app_data, int32_t *i2s_frame, size_t i2s_frame_size, int32_t *receive_buf, size_t sample_spaces_free)
 {
+    return 0;
+#if 0
     static int i;
     static int64_t sum[2];
     static int32_t src_data[2][SRC_FF3V_FIR_NUM_PHASES][SRC_FF3V_FIR_TAPS_PER_PHASE] __attribute__((aligned (8)));
@@ -323,6 +328,7 @@ size_t i2s_send_downsample_cb(rtos_i2s_t *ctx, void *app_data, int32_t *i2s_fram
         xassert(0);
         return 0;
     }
+#endif
 }
 
 void i2s_rate_conversion_enable(void)
@@ -418,7 +424,7 @@ void startup_task(void *arg)
     intent_engine_ready_sync();
 #endif
 
-    audio_pipeline_init(NULL, NULL);
+//    audio_pipeline_init(NULL, NULL);
 
     mem_analysis();
 }

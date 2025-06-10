@@ -10,13 +10,13 @@
  * The xvf_dfu app is used with the FFVA-INT device only
  */
 #ifndef APP_VERSION_MAJOR
-#define APP_VERSION_MAJOR   255
+#define APP_VERSION_MAJOR   1
 #endif
 #ifndef APP_VERSION_MINOR
-#define APP_VERSION_MINOR   254
+#define APP_VERSION_MINOR   0
 #endif
 #ifndef APP_VERSION_PATCH
-#define APP_VERSION_PATCH   253
+#define APP_VERSION_PATCH   5
 #endif
 
 /* Intertile port settings */

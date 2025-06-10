@@ -46,7 +46,7 @@ set(APP_LINK_OPTIONS
 set(APP_COMMON_LINK_LIBRARIES
     rtos::freertos_usb
     rtos::sw_services::device_control
-    lib_src
+#    lib_src
     lib_sw_pll
 )
 
@@ -74,7 +74,8 @@ if(ENABLE_ALL_FFVA_PIPELINES)
     )
 else()
     set(FFVA_PIPELINES_INT
-        fixed_delay
+#        fixed_delay
+        empty
     )
 
     set(FFVA_PIPELINES_UA
@@ -86,11 +87,11 @@ endif()
 # XMOS Example Design Targets
 #**********************
 include(${CMAKE_CURRENT_LIST_DIR}/ffva_int.cmake)
-include(${CMAKE_CURRENT_LIST_DIR}/ffva_int_cyberon.cmake)
-include(${CMAKE_CURRENT_LIST_DIR}/ffva_ua.cmake)
+#include(${CMAKE_CURRENT_LIST_DIR}/ffva_int_cyberon.cmake)
+#include(${CMAKE_CURRENT_LIST_DIR}/ffva_ua.cmake)
 
 #**********************
 # Include FFVA Debug and Extension targets
 #**********************
-include(${CMAKE_CURRENT_LIST_DIR}/ffva_int_dev.cmake)
-include(${CMAKE_CURRENT_LIST_DIR}/ffva_ua_dev.cmake)
+#include(${CMAKE_CURRENT_LIST_DIR}/ffva_int_dev.cmake)
+#include(${CMAKE_CURRENT_LIST_DIR}/ffva_ua_dev.cmake)
